@@ -68,35 +68,35 @@ void setup() {
   digitalWrite(SPI_CS, HIGH);
 
   digitalWrite(SPI_CS, LOW);
-  max7219Write(ADDR_DECODEMODE, 0);
-  digitalWrite(SPI_CS, HIGH);
-  
-  digitalWrite(SPI_CS,LOW);
-  max7219Write(ADDR_INTENSITY, 0);
-  digitalWrite(SPI_CS,HIGH);
-  
-  digitalWrite(SPI_CS,LOW);
-  max7219Write(ADDR_SCANLIMIT, 7);
-  digitalWrite(SPI_CS,HIGH);
-  
-  digitalWrite(SPI_CS,LOW);
-  max7219Write(ADDR_SHUTDOWN, 1);
-  digitalWrite(SPI_CS,HIGH);
-  
-  digitalWrite(SPI_CS, LOW);
-  max7219Write(ADDR_DISPLAYTEST, 0);
+  max7219Write(ADDR_DECODEMODE, 0); // Set no decode mode.
   digitalWrite(SPI_CS, HIGH);
   
   digitalWrite(SPI_CS, LOW);
-  max7219Write(ADDR_NOOP, 0);
+  max7219Write(ADDR_INTENSITY, 0); // Set darkest display.
+  digitalWrite(SPI_CS, HIGH);
+  
+  digitalWrite(SPI_CS, LOW);
+  max7219Write(ADDR_SCANLIMIT, 7); // Set all rows working.
+  digitalWrite(SPI_CS, HIGH);
+  
+  digitalWrite(SPI_CS, LOW);
+  max7219Write(ADDR_SHUTDOWN, 1); // Turn on display.
+  digitalWrite(SPI_CS, HIGH);
+  
+  digitalWrite(SPI_CS, LOW);
+  max7219Write(ADDR_DISPLAYTEST, 0); // Turn off display test.
+  digitalWrite(SPI_CS, HIGH);
+  
+  digitalWrite(SPI_CS, LOW);
+  max7219Write(ADDR_NOOP, 0); // After the command, last command will reach the 2nd max7219.
   digitalWrite(SPI_CS, HIGH);
 
   digitalWrite(SPI_CS, LOW);
-  max7219Write(ADDR_NOOP, 0);
+  max7219Write(ADDR_NOOP, 0); // After the command, last command will reach the 3rd max7219.
   digitalWrite(SPI_CS,HIGH);
 
   digitalWrite(SPI_CS, LOW);
-  max7219Write(ADDR_NOOP, 0);
+  max7219Write(ADDR_NOOP, 0); // After the command, last command will reach the 4th max7219.
   digitalWrite(SPI_CS, HIGH);
 }
 
