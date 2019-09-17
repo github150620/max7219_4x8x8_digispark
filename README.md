@@ -13,7 +13,7 @@
 ![image](https://github.com/github150620/max7219x4/blob/master/snapshot/attiny85_back.jpg)
 
 ### 3、5V电源模块
-4个MAX7219模块共256个LED，功率相对一般模块要大很多，建议使用78L05等电流稍大一点的电源模块。（AMS1117电流较小）
+4个MAX7219模块共256个LED，功率相对一般模块要大很多，建议使用L7805等电流稍大一点的电源模块。（AMS1117电流较小）
 
 ### 4、Arduino
 不需要添加第三方库。
