@@ -3,7 +3,10 @@
 // Register Settings
 // 1. Decode Mode:
 //   0 - No decode;
-//   1 - Code B;
+//   0x01 - Code B decode for digit 0, No decode for digits 1~7;
+//   0x03 - Code B decode for digits 0~1, No decode for digits 2~7;
+//   ...
+//   0xff - Code B decode for digits 0~7;
 //
 // 2. Intensity:
 //   0 - Darkest;
