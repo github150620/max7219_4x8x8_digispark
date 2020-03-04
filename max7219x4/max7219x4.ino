@@ -52,7 +52,7 @@ byte font[10][8] = {
   {0x7E,0x7E,0x66,0x7E,0x7E,0x06,0x7E,0x7E}  // "9"
 };
 
-int buf[4] = {0, 0, 0, 0};
+int buf[4] = {0, 0, 0, 0};  // Display buffer
 
 int SPI_MOSI = 0;
 int SPI_CLK  = 2;
